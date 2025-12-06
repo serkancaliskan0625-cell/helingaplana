@@ -978,4 +978,34 @@ body {
 /* Hover efekti (Opsiyonel) */
 #menu-toggle:hover {
     color: #e0ac00; /* Hafif koyu altın */
+
+}
+/*=============================================
+  HAMBURGER İKONU GENEL KURALI (MASAÜSTÜ GİZLEME)
+==============================================*/
+
+#menu-toggle {
+    display: none; /* Varsayılan olarak ikonu tamamen gizle (MASAÜSTÜ) */
+    cursor: pointer;
+    /* Diğer stil kuralları burada olabilir, ancak 'display: none' kritik */
+}
+/*=============================================
+  MOBİL GÖRÜNÜM (MAX-WIDTH: 992PX)
+==============================================*/
+@media (max-width: 992px) {
+    /* ... diğer mobil kurallarınız ... */
+
+    /* KRİTİK: İkonu sadece mobilde göster */
+    #menu-toggle {
+        display: flex; /* İkonu tekrar göster (flex ile hizalamayı kolaylaştırır) */
+        font-size: 26px; 
+        color: var(--color-accent);
+        align-items: center;
+        justify-content: center;
+        width: 45px; 
+        height: 45px;
+        z-index: 1000; 
+    }
+    
+    /* ... mobil menü (mobile-menu) ve navigasyon (main-nav) kurallarınız ... */
 }
