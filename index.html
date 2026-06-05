@@ -3,61 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaplanım Affet Beni</title>
+    <title>Gaplanım'a Sınav Moral Deposu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="#acil-servis">Acil Servis</a></li>
-            <li><a href="#recete">Aşk Reçetesi</a></li>
-            <li><a href="#yan-etkiler">Sensizlik Sendromu</a></li>
-            <li><a href="#tedavi">Tedaviye Başla</a></li>
-        </ul>
+    <nav class="dynamic-island-container">
+        <div class="dynamic-island">
+            <div class="island-content">
+                <a href="#acil-servis">Destek</a>
+                <a href="#oyun-alani">Sınavı Atlat</a>
+                <a href="#recete">Reçete</a>
+                <a href="#tedavi">Enerji</a>
+            </div>
+        </div>
     </nav>
 
     <div class="animation-container">
-        <div class="heart"></div>
-        <div class="pill"></div>
-        <div class="heart"></div>
-        <div class="pill"></div>
-        <div class="heart"></div>
-        <div class="pill"></div>
-        <div class="heart"></div>
-        <div class="pill"></div>
+        <div class="heart h1"></div>
+        <div class="pill p1"></div>
+        <div class="heart h2"></div>
+        <div class="pill p2"></div>
+        <div class="heart h3"></div>
+        <div class="pill p3"></div>
+        <div class="heart h4"></div>
+        <div class="pill p4"></div>
     </div>
 
     <section id="acil-servis" class="section">
-        <h1 class="message">GAPLANİM AFFET BENİ</h1>
-        <p class="sub-message">Kalp atışlarımı normale döndürecek tek etken madde sensin...</p>
+        <h1 class="message">STRESE İNAT: YAPARSIN GAPLANIM!</h1>
+        <p class="sub-message">Sınavlar gelip geçer, senin moralin ve sağlığın her şeyden önemli...</p>
     </section>
 
-    <section id="recete" class="section">
-        <h2>Klinik Aşk Reçetesi</h2>
-        <div class="prescription-card">
-            <p><strong>Hasta:</strong> Gaplanım</p>
-            <p><strong>Teşhis:</strong> Aşırı kırgınlık ve miyokardiyal kalp ağrısı.</p>
-            <p><strong>Tedavi Planı:</strong> Günde 3 doz kocaman sarılma, tok karnına tatlı sözler.</p>
-            <p><strong>Eczacı Notu:</strong> Lütfen ilacınızı aksatmayın, yoksa bu eczacınız kahrından ölebilir.</p>
+    <section id="oyun-alani" class="section">
+        <h2>Sınav Sorularından Kaçış!</h2>
+        <p class="game-instruction">Zıplamak için ekrana dokun. Engellere çarpmadan sınavları atlat!</p>
+        
+        <div class="game-container">
+            <canvas id="gameCanvas" width="360" height="400"></canvas>
+            <div id="game-overlay">
+                <button id="start-btn" onclick="startGame()">Sınavı Başlat ✍️</button>
+            </div>
         </div>
     </section>
 
-    <section id="yan-etkiler" class="section">
-        <h2>Sensizliğin Yan Etkileri</h2>
-        <ul class="side-effects">
-            <li>Akut uyku bozukluğu ve sürekli seni düşünme hali.</li>
-            <li>Hipoksi (Oksijensiz kalmış gibi nefesim kesiliyor).</li>
-            <li>Kalp ritminde tehlikeli dalgalanmalar (Aritmi).</li>
-            <li>Gülümseme kaslarında geçici felç.</li>
-        </ul>
+    <section id="recete" class="section">
+        <h2>Sınav Dönemi Moral Reçetesi</h2>
+        <div class="prescription-card">
+            <p><strong>Dost:</strong> Gaplanım</p>
+            <p><strong>Teşhis:</strong> Akut sınav stresi, yoğun çalışma ve motivasyon dalgalanması.</p>
+            <p><strong>Tedavi Planı:</strong> Sınav sonrası sınırsız kafa dağıtma garantisi, bolca kahve ve moral desteği.</p>
+            <p><strong>Eczacı Notu:</strong> Sen ne zorlukların üstesinden geldin, bu sınavlar da senden büyük değil!</p>
+        </div>
     </section>
 
+    
     <section id="tedavi" class="section">
-        <h2>Birlikte İyileşelim</h2>
-        <p class="sub-message">Dozu onaylıyor musun?</p>
-        <button class="forgive-btn" onclick="alert('Teşekkür ederim! Reçeteniz sisteme işlendi ve kalbim iyileşmeye başladı. 💖💊')">Affettim!</button>
+        <h2>Modunu Yükseltme Zamanı</h2>
+        <p class="sub-message">Sana inanan bir dostunun olduğunu unutma. Enerjiyi yüklemek için bas!</p>
+        <button class="forgive-btn" onclick="sendMoralMessage()">Moralini Yükselt!</button>
     </section>
-
+    <script src="script.js"></script>
 </body>
 </html>
